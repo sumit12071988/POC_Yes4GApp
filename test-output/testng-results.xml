@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29958" started-at="2021-10-08T03:20:20 SGT" finished-at="2021-10-08T03:20:50 SGT">
+  <suite name="Default suite" duration-ms="41181" started-at="2021-10-08T03:22:22 SGT" finished-at="2021-10-08T03:23:03 SGT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29958" started-at="2021-10-08T03:20:20 SGT" finished-at="2021-10-08T03:20:50 SGT">
+    <test name="Default test" duration-ms="41181" started-at="2021-10-08T03:22:22 SGT" finished-at="2021-10-08T03:23:03 SGT">
       <class name="PocTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:PocTest@3aeaafa6]" name="setUp" is-config="true" duration-ms="9368" started-at="2021-10-08T03:20:20 SGT" finished-at="2021-10-08T03:20:30 SGT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:PocTest@3aeaafa6]" name="setUp" is-config="true" duration-ms="15962" started-at="2021-10-08T03:22:22 SGT" finished-at="2021-10-08T03:22:38 SGT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="myPOC()[pri:0, instance:PocTest@3aeaafa6]" name="myPOC" duration-ms="15383" started-at="2021-10-08T03:20:30 SGT" finished-at="2021-10-08T03:20:45 SGT">
+        <test-method status="PASS" signature="myPOC()[pri:0, instance:PocTest@3aeaafa6]" name="myPOC" duration-ms="23042" started-at="2021-10-08T03:22:38 SGT" finished-at="2021-10-08T03:23:01 SGT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- myPOC -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PocTest@3aeaafa6]" name="tearDown" is-config="true" duration-ms="5141" started-at="2021-10-08T03:20:45 SGT" finished-at="2021-10-08T03:20:50 SGT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PocTest@3aeaafa6]" name="tearDown" is-config="true" duration-ms="2101" started-at="2021-10-08T03:23:01 SGT" finished-at="2021-10-08T03:23:03 SGT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

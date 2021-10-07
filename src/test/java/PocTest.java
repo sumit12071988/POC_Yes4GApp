@@ -55,15 +55,6 @@ public class PocTest {
 		By logoutBtn = MobileBy.xpath("//*[@text='Logout']");
 		By confirmYesBtn = MobileBy.id("android:id/button1");		
 		
-//		driver.findElement(yesIDTxt).sendKeys("01117050039@yes.my");
-//		driver.findElement(pwdBtn).click();
-//		driver.findElement(pwdTxt).sendKeys("Testpoc_1234");
-//		tap(loginBtn);
-//		driver.findElement(moreTab).click();
-//		driver.findElement(logoutBtn).click();
-//		driver.findElement(confirmYesBtn).click();
-		
-		
 		enter(yesIDTxt, "01117050039@yes.my")
 		 	.tap(pwdBtn)
 		 	.enter(pwdTxt, "Testpoc_1234")
