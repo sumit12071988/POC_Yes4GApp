@@ -1,3 +1,4 @@
+package org;
 import static org.testng.Assert.assertTrue;
 
 import java.net.URL;
@@ -61,9 +62,7 @@ public class PocTest {
 		 	.tap(loginBtn)
 		 	.tap(moreTab)
 		 	.tap(logoutBtn)
-		 	.tap(confirmYesBtn);
-		
-		
+		 	.tap(confirmYesBtn);		
 		
 		assertTrue(driver.findElement(pwdBtn).isDisplayed());
 	}
