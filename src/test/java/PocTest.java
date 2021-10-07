@@ -1,6 +1,5 @@
 import static org.testng.Assert.assertTrue;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -12,9 +11,13 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.touch.TapOptions;
+import io.appium.java_client.touch.offset.ElementOption;
 
-public class PocTest {
+@SuppressWarnings("rawtypes")
+public class PocTest {	
 	
 	AppiumDriver driver;
 	
@@ -39,7 +42,6 @@ public class PocTest {
 	
 	@AfterClass
 	public void tearDown() throws Exception {
-		Thread.sleep(4000);
 		driver.quit();
 	}
 	
@@ -53,17 +55,38 @@ public class PocTest {
 		By logoutBtn = MobileBy.xpath("//*[@text='Logout']");
 		By confirmYesBtn = MobileBy.id("android:id/button1");		
 		
-		driver.findElement(yesIDTxt).sendKeys("01117050039@yes.my");
-		driver.findElement(pwdBtn).click();
-		driver.findElement(pwdTxt).sendKeys("Testpoc_1234");
-		driver.findElement(loginBtn).click();
-		driver.findElement(moreTab).click();
-		driver.findElement(logoutBtn).click();
-		driver.findElement(confirmYesBtn).click();	
+//		driver.findElement(yesIDTxt).sendKeys("01117050039@yes.my");
+//		driver.findElement(pwdBtn).click();
+//		driver.findElement(pwdTxt).sendKeys("Testpoc_1234");
+//		tap(loginBtn);
+//		driver.findElement(moreTab).click();
+//		driver.findElement(logoutBtn).click();
+//		driver.findElement(confirmYesBtn).click();
+		
+		
+		enter(yesIDTxt, "01117050039@yes.my")
+		 	.tap(pwdBtn)
+		 	.enter(pwdTxt, "Testpoc_1234")
+		 	.tap(loginBtn)
+		 	.tap(moreTab)
+		 	.tap(logoutBtn)
+		 	.tap(confirmYesBtn);
+		
+		
 		
 		assertTrue(driver.findElement(pwdBtn).isDisplayed());
 	}
 	
-
-
+	private PocTest enter(By locator, String txt) {
+		driver.findElement(locator).sendKeys(txt);
+		return this;
+	}
+	private PocTest tap(By locator) {
+		new TouchAction(driver)
+			.tap(TapOptions.tapOptions().withElement(ElementOption.element(driver.findElement(locator))))
+			.perform();
+		return this;
+	}
+	
+	
 }
